@@ -13,11 +13,27 @@ After doing some research, I found out about the existence of sidenotes, particu
 
 ## How to install
 
-1. Download the css file inside the css folder inside `<vault name>/.obsidian/snippets`.
-2. Enable the snippets under the Appearance section in the settings.
+1. Download the CSS file from the css folder inside `<vault name>/.obsidian/snippets`.
+2. Enable the snippets under the **Appearance** section in the settings.
 3. Download the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin in order to customize the snippet and also to make it work.
 
 ## How to use
+
+1. To create a sidenote callout you have to write [!sidenote] to the first line of a blockquote. To reverse their position you just put the left adjustment ([!sidenote|left]).
+
+```
+>[!sidenote]
+>Ut consectetur diam lorem, ac consectetur eros imperdiet nec. Nunc quam sem, posuere at est nec, congue condimentum arcu.
+```
+
+or reversed
+
+```
+>[!sidenote|left]
+>Quisque sodales mollis sodales. Morbi sem erat, gravida in velit in, fermentum consectetur neque.
+```
+
+![basic](https://github.com/user-attachments/assets/72d9ef7c-9766-4dcb-b7bb-3803b10418cc)
 
 ## License
 
