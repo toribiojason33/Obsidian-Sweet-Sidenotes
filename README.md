@@ -4,7 +4,7 @@
 
 Sweet Sidenotes is a css snippet that allows you to get, via callouts, notes alongside the main text.
 
-Table of content
+**Table of content**
 1. [Introduction](#Introduction)
 2. [How to install](#How-to-install)
 3. [How to use](How-to-use)
@@ -36,6 +36,11 @@ or reversed
 >Quisque sodales mollis sodales. Morbi sem erat, gravida in velit in, fermentum consectetur neque.
 ```
 
+What it would look like:
+
+![sidenotes](https://github.com/user-attachments/assets/e7eaae6b-5d27-48cd-bbee-44808b3923c7)
+
+
 2. You can use adjustment to modify the width of the sidenote. There are 4 adjustment: small, medium, large, larger.
 
 ```
@@ -50,7 +55,14 @@ or
 >Donec laoreet ex mi, quis interdum velit tempus nec. Phasellus vitae tincidunt mauris. In efficitur consectetur eros, ac imperdiet ante euismod nec. Nunc elementum malesuada luctus.
 ```
 
+What it would look like:
+
+![another](https://github.com/user-attachments/assets/8e73f362-125d-4ca3-b361-20768fefd255)
+
+
 3. To further customize the sidenote you can use [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+
+Style Settings panel:
 
 ![style settings](https://github.com/user-attachments/assets/91cd6b86-235f-42a4-8416-684df1b25956)
 
