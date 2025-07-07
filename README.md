@@ -7,7 +7,7 @@ Sweet Sidenotes is a css snippet that allows you to get, via callouts, notes alo
 **Table of content**
 1. [Introduction](#Introduction)
 2. [How to install](#How-to-install)
-3. [How to use](How-to-use)
+3. [How to use](#How-to-use)
 4. [License](#License)
 
 ## Introduction
