@@ -1,0 +1,408 @@
+/*
+
+	Snippet created by BudinoSurelySweet
+	See my works at https://github.com/BudinoSurelySweet
+	
+	Sweet Sidenotes v1.0
+
+*/
+
+/* @settings
+
+name: Sweet Sidenotes
+id: sweet-sidenotes
+settings:
+	-
+		id: callout-customization
+		title: Callout
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: ssn-enabled
+		title: Enable sidenotes
+		description: Determines whether the sidenote will be displayed. If it is false then a normal callout will be displayed.
+		type: class-toggle
+		default: true
+		addCommand: true
+	-
+		id: ssn-icon
+		title: Sidenote icon
+		description: The icon that will be used when the sidenote is not displayed on the sides. You can use lucid icons or svg, as mentioned in the documentation.
+		type: variable-text
+		default: lucide-notepad-text
+	-
+		id: ssn-max-width
+		title: Width
+		description: The width of the callout when at the sides (em).
+		type: variable-number
+		default: 15
+		format: em
+	-
+		id: ssn-gap
+		title: Gap
+		description: The distance that lies between the callout and the text (em). 
+		type: variable-number
+		allowEmpty: false
+		default: 3
+		format: em
+	-
+		id: ssn-vertical-offset
+		title: Vertical offset
+		description: Distance above the callout. 
+		type: variable-number
+		default: -1
+		format: em
+    -
+        id: ssn-opacity
+        title: Opacity
+        description: The opacity of the callout.
+        type: variable-number-slider
+        default: 0.5
+		min: 0
+		max: 1
+		step: 0.01
+	-
+		id: ssn-border-width
+		title: Border width
+		description: The size of the callout border.
+		type: variable-number
+		default: 0
+		format: px
+	-
+		id: content
+		title: Content
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: ssn-font-size
+		title: Font size
+		description: Change the font size (em).
+		type: variable-number
+		default: 0.85
+		format: em
+	-
+		id: ssn-padding-top
+		title: Padding top
+		description: Change the top padding (px).
+		type: variable-number
+		allowEmpty: false
+		default: 10
+		format: px
+	-
+		id: ssn-padding-right
+		title: Padding right
+		description: Change the right padding (px).
+		type: variable-number
+		allowEmpty: false
+		default: 20
+		format: px
+	-
+		id: ssn-padding-bottom
+		title: Padding bottom
+		description: Change the bottom padding (px).
+		type: variable-number
+		allowEmpty: false
+		default: 10
+		format: px
+	-
+		id: ssn-padding-left
+		title: Padding left
+		description: Change the left padding (px).
+		type: variable-number
+		allowEmpty: false
+		default: 20
+		format: px
+	-
+		id: colors
+		title: Colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: ssn-bg-color-dark
+		title: Background color (dark theme)
+		description: Change the background color of the callout for the dark theme.
+		type: variable-color
+		opacity: false
+		format: rgb-values
+		default: rgb()
+	-
+		id: ssn-bg-color-light
+		title: Background color (light theme)
+		description: Change the background color of the callout for the light theme.
+		type: variable-color
+		opacity: false
+		format: rgb-values
+		default: rgb()
+    -
+		id: ssn-content-color-dark 
+		title: Content Color (Dark Theme)
+		description: Change the color of the content for the dark theme.
+		type: variable-color
+		opacity: false
+		format: hex
+		default: "#fff"
+	-
+		id: ssn-content-color-light 
+		title: Content Color (Light Theme)
+		description: Change the color of the content for the light theme.
+		type: variable-color
+		opacity: false
+		format: hex
+		default: "#000"
+	-
+		id: animation
+		title: Animation
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: ssn-hover-anim-final-value
+		title: Hover animation enabled
+		description: Enable or disable the animation when the mouse is over the text.
+		type: variable-select
+		default: calc(1) 
+		options:
+			-
+				label: On
+				value: calc(1)
+			-
+				label: Off
+				value: var(--ssn-opacity)
+	-
+		id: ssn-hover-anim-duration
+		title: Hover animation duration
+		description: Determines how long the animation lasts (seconds).
+		type: variable-number
+		default: 0.3
+	-
+		id: adjustments
+		title: Adjustments
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: ssn-width-adj-small
+		title: 'Width adjustment: small'
+		description: Determines how wide the small adjustment is (em).
+		type: variable-number
+		default: 5
+		format: em
+	-
+		id: ssn-width-adj-medium
+		title: 'Width adjustment: medium'
+		description: Determines how wide the medium adjustment is (em).
+		type: variable-number
+		default: 10
+		format: em
+	-
+		id: ssn-width-adj-large
+		title: 'Width adjustment: large'
+		description: Determines how wide the large adjustment is (em).
+		type: variable-number
+		default: 15
+		format: em
+	-
+		id: ssn-width-adj-larger
+		title: 'Width adjustment: larger'
+		description: Determines how wide the larger adjustment is (em).
+		type: variable-number
+		default: 20
+		format: em
+*/
+
+:root {
+	--ssn-icon: "lucide-notepad-text";
+
+	--ssn-max-width: 15em;
+	--ssn-gap: 3em;
+	--ssn-vertical-offset: -1em;
+	--ssn-opacity: 0.5;
+	--ssn-border-width: 0px;
+
+	--ssn-font-size: 0.85em;
+
+	--ssn-padding-top: 10px;
+	--ssn-padding-right: 20px;
+	--ssn-padding-bottom: 10px;
+	--ssn-padding-left: 20px;
+
+	--ssn-bg-color-dark: ;
+	--ssn-bg-color-light: ;
+	--ssn-content-color-dark: #fff;
+	--ssn-content-color-light: #000;
+
+	--ssn-hover-anim-final-value: 1;
+	--ssn-hover-anim-duration: 0.3;
+
+	/* Gap adjustment */
+	--ssn-width-adj-small: 5em;
+	--ssn-width-adj-medium: 10em;
+	--ssn-width-adj-large: 15em;
+	--ssn-width-adj-larger: 20em;
+}
+
+/*
+
+	Sidenotes
+
+*/
+
+.ssn-enabled .callout[data-callout~=sidenote] {
+	position: absolute;
+
+	max-width: var(--ssn-max-width);
+	font-size: var(--ssn-font-size);
+	border-width: var(--ssn-border-width);
+
+	padding-top: var(--ssn-padding-top);
+	padding-right: var(--ssn-padding-right);
+	padding-bottom: var(--ssn-padding-bottom);
+	padding-left: var(--ssn-padding-left);
+
+	opacity: var(--ssn-opacity);
+	transition: opacity calc(var(--ssn-hover-anim-duration) * 1s);
+
+	/* Set the tufte to the right */
+	text-align: left;
+	margin: unset;
+	margin-left: calc(var(--file-line-width) + var(--ssn-gap));
+}
+
+/* 
+
+	Left side sidenote
+
+*/
+
+.ssn-enabled .callout[data-callout~=sidenote]:is([data-callout-metadata~=left]) {
+	text-align: right;
+	margin: unset;
+	/* Width + gap (and make the result negative) */
+	margin-left: calc(-1 * (var(--ssn-max-width) + var(--ssn-gap)));
+}
+
+/*
+
+	Animation
+
+*/
+
+.ssn-enabled .callout[data-callout~=sidenote]:hover {
+	opacity: var(--ssn-hover-anim-final-value);
+}
+
+/* 
+
+	Remove some styling
+	
+*/
+
+.ssn-enabled .callout[data-callout~=sidenote] p {
+	margin: 0;
+}
+
+.ssn-enabled .callout[data-callout~=sidenote] .callout-title {
+	--callout-title-padding: 0;
+}
+
+.ssn-enabled .callout[data-callout~=sidenote] .callout-content {
+	padding: 0;
+}
+
+.ssn-enabled .callout[data-callout~=sidenote] .callout-title .callout-icon {
+	margin-top: var(--ssn-vertical-offset);
+	display: none;
+}
+
+.ssn-enabled .callout[data-callout~=sidenote]:not([data-callout-metadata~=show-title]) .callout-title-inner {
+	display: none;
+}
+
+/* 
+
+	Live preview customization
+
+*/
+
+.ssn-enabled .is-live-preview .callout[data-callout~=sidenote] {
+	position: relative;
+	margin: unset;
+	margin-left: 24em !important;
+}
+
+.ssn-enabled .is-live-preview .callout[data-callout~=sidenote]:is([data-callout-metadata~=left]) {
+	position: relative;
+	margin: unset;
+	margin-left: 0em !important;
+}
+
+/*
+	
+	Dark/light theme
+	
+*/
+
+.theme-dark .callout[data-callout~=sidenote] {
+	--callout-color: var(--ssn-bg-color-dark);
+	color: var(--ssn-content-color-dark);
+}
+
+.theme-light .callout[data-callout~=sidenote] {
+	--callout-color: var(--ssn-bg-color-light);
+	color: var(--ssn-content-color-light);
+}
+
+/*
+
+	Default callout
+	
+*/
+
+.callout[data-callout~=sidenote] {
+	--callout-icon: var(--ssn-icon);
+}
+
+/*
+
+	Sidenotes gap adjustments
+
+*/
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata=small] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-small));
+}
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata=medium] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-medium));
+}
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata=large] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-large));
+}
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata=larger] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-larger));
+}
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata~=left][data-callout-metadata~=small] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-small));
+	margin-left: calc(-1 * (var(--ssn-max-width) + var(--ssn-gap) + var(--ssn-width-adj-small)));
+}
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata~=left][data-callout-metadata~=medium] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-medium));
+	margin-left: calc(-1 * (var(--ssn-max-width) + var(--ssn-gap) + var(--ssn-width-adj-medium)));
+}
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata~=left][data-callout-metadata~=large] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-large));
+	margin-left: calc(-1 * (var(--ssn-max-width) + var(--ssn-gap) + var(--ssn-width-adj-large)));
+}
+
+.ssn-enabled .callout[data-callout~=sidenote][data-callout-metadata~=left][data-callout-metadata~=larger] {
+	max-width: calc(var(--ssn-max-width) + var(--ssn-width-adj-larger));
+	margin-left: calc(-1 * (var(--ssn-max-width) + var(--ssn-gap) + var(--ssn-width-adj-larger)));
+}
